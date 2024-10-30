@@ -53,18 +53,30 @@ Agregamos 2 sprites adicionales y le damos diferentes pesos en el objeto **Targe
 ![animacion peso](https://github.com/Alu0101030562/Screenshots/blob/main/Screenshots/Cinemachine2D/10.%20Ejecuci%C3%B3n%20group%20target%20con%20pesos.gif)
 
 ## 4. Impulso.
-### a. Cnemachine Impulse Source: el impulso se genera en respuesta a un evento
+### a. Cinemachine Impulse Source: el impulso se genera en respuesta a un evento
+Añadimos el componente **CinemachineImpulseListener** en la cámara virtual y luego **CinemachineImpulseSource** en cualquier otro GameObject. El primer componente estará a la escucha de que se dispare un impulso desde CinemachineImpulseSource. Después crearemos el [script](https://github.com/Alu0101030562/Juegos2D-Camara/blob/main/Assets/Scripts/CameraShake.cs) encargado de hacer el impulso.
 
 ![](https://github.com/Alu0101030562/Screenshots/blob/main/Screenshots/Cinemachine2D/11.%20Cinemachine%20impulse.PNG)
+
 ![](https://github.com/Alu0101030562/Screenshots/blob/main/Screenshots/Cinemachine2D/12.%20Ejecuci%C3%B3n%20cinemachine%20impulse.gif)
+
 ### b. Cinemachine Collisión Impulse Source: el impulso se genera por una colisión
 
+Para esto debemos añadir el componente **CinematicCollisionImpulseSource** al objeto con el queremos interactuar. Este obbjeto debe tener un componente **Collider2D**
+
 ![](https://github.com/Alu0101030562/Screenshots/blob/main/Screenshots/Cinemachine2D/13.%20Cinemachine%20impulse%20collider.PNG)
+
 ![](https://github.com/Alu0101030562/Screenshots/blob/main/Screenshots/Cinemachine2D/14.%20Ejecuci%C3%B3n%20cinemachine%20impulse%20collider.gif)
+
 ## 5. Implementar un zoom a la cámara del jugador que se controle con las teclas w-s
 
+Hacer el [script](https://github.com/Alu0101030562/Juegos2D-Camara/blob/main/Assets/Scripts/CameraZoom.cs) encargado de implementar el zoom
+
 ![](https://github.com/Alu0101030562/Screenshots/blob/main/Screenshots/Cinemachine2D/15.%20zoom%20camara.gif)
+
 ## 6. Seleccionar un conjunto de teclas que permitan hacer el cambio entre dos cámaras . (Habilitar/Deshabilitar el gameobject de la cámara virtual)
+
+Hacemos el [script](https://github.com/Alu0101030562/Juegos2D-Camara/blob/main/Assets/Scripts/CameraSwitcher.cs) encargado de permitir el cambio de camaras (1 en el caso de la primera cámara virtual y 2 para la segunda)
 
 ![](https://github.com/Alu0101030562/Screenshots/blob/main/Screenshots/Cinemachine2D/16.%20cambio%20de%20camara.gif)
 
@@ -72,8 +84,12 @@ Agregamos 2 sprites adicionales y le damos diferentes pesos en el objeto **Targe
 ### a. Crear un script para activar la cámara lenta cuando el personaje entre en colisión con un elemento de la escena que elijas para activar esta propiedad.
 ### b. Crear un script para activar la cámara rápida cuando el personaje entre en colisión con un elemento de la escena que elijas para activar esta propiedad.
 
+hacemos que el mismo [script](https://github.com/Alu0101030562/Juegos2D-Camara/blob/main/Assets/Scripts/TimeEffectTrigger.cs) sirva tanto para el primer apartado como para el segundo.
+
 ![](https://github.com/Alu0101030562/Screenshots/blob/main/Screenshots/Cinemachine2D/17.%20camara%20rapida%20y%20lenta.gif)
 
 ## 8. Crear un script para intercambiar la cámara activa, una estará confinada y la otra no cuando el personaje entre en colisión con un elemento de la escena que elijas para realizar el intercambio.
+
+Este [script](https://github.com/Alu0101030562/Juegos2D-Camara/blob/main/Assets/Scripts/CameraTransition.cs) se encargará de seleccionar la cámara virtual que tengamos asignado al objeto.
 
 ![](https://github.com/Alu0101030562/Screenshots/blob/main/Screenshots/Cinemachine2D/18.%20Intercambio%20de%20c%C3%A1maras.gif)
